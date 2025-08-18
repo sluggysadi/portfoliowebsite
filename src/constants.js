@@ -20,14 +20,14 @@ import canvaLogo from './assets/tech/canva.png';
 import figmaLogo from './assets/tech/figma.png';
 import htmlLogo from './assets/tech/html.png'
 import pythonLogo from './assets/tech/python.png';
-import gitLogo from './assets/tech/GitHub.png';
+import gitLogo from './assets/tech/gitHub.png';
 
 // Project Section Logo's
 import myucdapp from './assets/work_logo/myucdapp.jpg';
 import deepresearch from './assets/work_logo/research.png';
 import fakedata from './assets/work_logo/fakedata.png';
 import gofish from './assets/work_logo/gofish.png';
-import mlpmodel from './assets/work_logo/mlpmodel.png';
+import mlpmodel from './assets/work_logo/MLPmodel.png';
 import emotions from './assets/work_logo/emotions.png';
 import mldimension from './assets/work_logo/ml-dimension.png';
 import pocketballot from './assets/work_logo/pocketballot.png';

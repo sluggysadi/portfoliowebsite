@@ -34,6 +34,7 @@ import emotions from './assets/work_logo/emotions.png';
 import mldimension from './assets/work_logo/ml-dimension.png';
 import pocketballot from './assets/work_logo/pocketballot.png';
 import DLforLowBandwidth from '/public/pdfs/paper2.pdf';
+import comiccrafter from './assets/work_logo/comiccrafter.png';
 
 export const SkillsInfo = [
   {
@@ -106,16 +107,9 @@ export const SkillsInfo = [
       tags: ["Python", "Development", "Pandas", "Streamlit"],
       file: "https://github.com/sluggysadi/mock_data_producer",
     },
+  
     {
       id: 3,
-      title: "Go Fish",
-      description:
-        "Built an interactive Go Fish card game with Matlab, applying state management and event handling to create a smooth game loop and engaging UI.",
-      image: gofish,
-      tags: ["MatLab", "App Development"],
-    },
-    {
-      id: 4,
       title: "MLP Model",
       description:
         "Implemented and evaluated a multiple linear regression model in R to predict active physicians in 1990. Produced visual insights with ggplot2 and conducted exploratory data analysis to validate findings.",
@@ -124,7 +118,7 @@ export const SkillsInfo = [
       file: "http://rpubs.com/sadiafa/1336843",
     },
     {
-      id: 5,
+      id: 4,
       title: "ML Classification of Children's Drawings",
       description:
         "Built a deep learning pipeline to classify children’s drawings by emotional category using CNNs and Random Forests. Explored the intersection of AI and psychology, achieving interpretable results for affective computing research.",
@@ -133,7 +127,7 @@ export const SkillsInfo = [
       file: "https://github.com/sluggysadi/ECS-111-Emotion-Detection",
     },
     {
-      id: 6,
+      id: 5,
       title: "Interpretable Machine Learning: Clustering & Dimensionality Reduction",
       description:
         "Applied PCA, t-SNE, and clustering methods with scikit-learn to uncover latent patterns in high-dimensional datasets. Emphasized interpretability with clear visualizations using Matplotlib and Pandas.",
@@ -142,12 +136,29 @@ export const SkillsInfo = [
       file: "https://github.com/sluggysadi/interpretable-ml-dimension-reduction",
     },
     {
-      id: 7,
+      id: 6,
       title: "Pocket Ballot",
       description:
         "Designed a civic engagement app in React to simplify voting prep. Features a mock ballot, voter checklist, and location services, presented in a clean, mobile-first UI inspired by Figma prototypes.",
       image: pocketballot,
-      tags: ["React", "Mobile Development"],
-      file: "https://github.com/sluggysadi/pocket-ballot",
+      tags: ["React", "Typescript", "Supabase", "TailwindCSS", "Mobile Development"],
+      file: "https://github.com/sluggysadi/pocketballot",
     },
+    {
+      id: 7,
+      title: "Go Fish",
+      description:
+        "Built an interactive Go Fish card game with Matlab, applying state management and event handling to create a smooth game loop and engaging UI.",
+      image: gofish,
+      tags: ["MatLab", "App Development"],
+    },
+    {
+      id: 8,
+      title: "Comic Crafter",
+      description:
+        "The AI Comic Strip Generator leverages generative AI to transform user prompts into dynamic, 90s-inspired superhero comic panels. Built with a modern frontend architecture, it delivers fast, interactive, and visually immersive storytelling experiences.",
+      image: comiccrafter,
+      tags: ["React", "TypeScript", "DALL·E", "GPT-3", "App Development", "Supabase"],
+      file: "https://github.com/sluggysadi/comic-crafter",
+    }
   ];

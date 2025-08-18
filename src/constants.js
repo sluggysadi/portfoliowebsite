@@ -29,7 +29,7 @@ import myucdapp from './assets/work_logo/myucdapp.jpg';
 import deepresearch from './assets/work_logo/research.png';
 import fakedata from './assets/work_logo/fakedata.png';
 import gofish from './assets/work_logo/gofish.png';
-import mlpmodel from './assets/work_logo/MLPmodel.png';
+import mlpmodel from './assets/work_logo/MLPModel.png';
 import emotions from './assets/work_logo/emotions.png';
 import mldimension from './assets/work_logo/ml-dimension.png';
 import pocketballot from './assets/work_logo/pocketballot.png';
@@ -145,6 +145,7 @@ export const SkillsInfo = [
       file: "https://github.com/sluggysadi/pocketballot",
     },
     {
+      
       id: 7,
       title: "Go Fish",
       description:
@@ -159,6 +160,6 @@ export const SkillsInfo = [
         "The AI Comic Strip Generator leverages generative AI to transform user prompts into dynamic, 90s-inspired superhero comic panels. Built with a modern frontend architecture, it delivers fast, interactive, and visually immersive storytelling experiences.",
       image: comiccrafter,
       tags: ["React", "TypeScript", "DALL·E", "GPT-3", "App Development", "Supabase"],
-      file: "https://github.com/sluggysadi/comic-crafter",
+      file: "https://github.com/sluggysadi/comiccrafter",
     }
   ];

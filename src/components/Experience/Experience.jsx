@@ -1,7 +1,7 @@
 import React from "react";
 import { AnimatedCarousel } from "./carousel";
 import img0 from "../../assets/experience/img0.jpg"
-import img1 from "../../assets/experience/img1.png"
+import img1 from "../../assets/experience/img1.jpg"
 import img2 from "../../assets/experience/img2.jpg";
 import img3 from "../../assets/experience/img3.jpg";
 import img4 from "../../assets/experience/img4.jpg";

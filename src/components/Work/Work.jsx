@@ -8,6 +8,10 @@ const TABS = [
   "App/Web Development",
 ];
 
+// --- helpers ---
+const getLink = (p) =>
+  p.file || p.File || p.Figma || p.File2 || p.github || p.webapp || null;
+
 // Infer a category from tags/title/description so you don't have to edit constants.js
 const inferCategory = (p) => {
   const tags = (p.tags || []).map((s) => s.toLowerCase());
@@ -20,7 +24,7 @@ const inferCategory = (p) => {
         "deep learning",
         "nlp",
         "random forest classifier",
-        "artifical intelligence", // given typo in constants.js
+        "artifical intelligence",
         "artificial intelligence",
       ].includes(x)
     ) ||
@@ -42,13 +46,13 @@ const inferCategory = (p) => {
   if (isML) return "Machine Learning";
   if (isDS) return "Data Science/Analytics";
   if (isApp) return "App/Web Development";
-  return "App/Web Development"; // sensible default for a portfolio
+  return "App/Web Development";
 };
 
 const Work = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [activeTab, setActiveTab] = useState("All");
-  const dialogRef = useRef(null);
+  const overlayRef = useRef(null);
 
   const handleOpenModal = (project) => setSelectedProject(project);
   const handleCloseModal = () => setSelectedProject(null);
@@ -102,7 +106,7 @@ const Work = () => {
       {/* Grid */}
       <div className="grid gap-8 sm:gap-10 grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
         {visibleProjects.map((p) => {
-          const openHref = p.File || p.Figma || p.File2;
+          const openHref = getLink(p);
           return (
             <button
               key={p.id}
@@ -118,7 +122,7 @@ const Work = () => {
               {/* Media */}
               <div className="relative">
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-                <img src={p.image} alt={p.title} className="w-full aspect-[16/10] object-cover" />
+                <img src={p.image} alt={p.title || ""} className="w-full aspect-[16/10] object-cover" />
               </div>
 
               {/* Body */}
@@ -176,19 +180,29 @@ const Work = () => {
       {/* Modal */}
       {selectedProject && (
         <div
-          ref={dialogRef}
+          ref={overlayRef}
+          role="dialog"
+          aria-modal="true"
           onMouseDown={(e) => {
-            // click-outside close
-            if (e.target === dialogRef.current) handleCloseModal();
+            // click-outside close (only when clicking the dark overlay)
+            if (e.target === overlayRef.current) handleCloseModal();
           }}
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4"
         >
-          <div className="relative w-full max-w-3xl overflow-hidden rounded-2xl border border-white/10 bg-[#0b0b12]/95 backdrop-blur shadow-[0_40px_120px_rgba(0,0,0,.6)]">
+          <div
+            className="relative w-full max-w-3xl overflow-hidden rounded-2xl
+                       border border-white/10 bg-[#0b0b12]/95 backdrop-blur
+                       shadow-[0_40px_120px_rgba(0,0,0,.6)] max-h-[90vh] overflow-y-auto"
+          >
             {/* Close */}
             <button
               onClick={handleCloseModal}
-              className="absolute right-3 top-3 h-10 w-10 rounded-full bg-white/10 hover:bg-white/15 border border-white/10 text-white text-xl leading-none flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-white/30"
+              className="absolute right-3 top-3 h-10 w-10 rounded-full
+                         bg-white/10 hover:bg-white/15 border border-white/10
+                         text-white text-xl leading-none flex items-center justify-center
+                         focus:outline-none focus:ring-2 focus:ring-white/30 z-10"
               aria-label="Close modal"
+              type="button"
             >
               ×
             </button>
@@ -197,7 +211,7 @@ const Work = () => {
             <div className="relative">
               <img
                 src={selectedProject.image}
-                alt={selectedProject.title}
+                alt={selectedProject.title || ""}
                 className="w-full aspect-[16/9] object-contain bg-black/20"
               />
               <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
@@ -223,9 +237,9 @@ const Work = () => {
 
               {/* Single Open File Button (gradient) */}
               <div className="mt-6">
-                {(selectedProject.File || selectedProject.Figma || selectedProject.File2) && (
+                {getLink(selectedProject) && (
                   <a
-                    href={selectedProject.File || selectedProject.Figma || selectedProject.File2}
+                    href={getLink(selectedProject)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block rounded-xl text-white font-semibold text-center py-2.5 px-5 transition
@@ -235,6 +249,9 @@ const Work = () => {
                   </a>
                 )}
               </div>
+
+              {/* Extra bottom padding for scroll affordance */}
+              <div className="h-2" />
             </div>
           </div>
         </div>

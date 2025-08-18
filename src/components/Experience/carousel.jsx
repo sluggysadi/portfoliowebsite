@@ -60,14 +60,16 @@ export const AnimatedCarousel = ({
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.2, ease: "easeInOut" }}
+              className="text-white"
             >
               {slides[active]?.title && (
-                <h3 className="text-2xl md:text-3xl font-bold text-black dark:text-white">
+                <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-[#ff5e62] via-[#ff9966] to-[#6a11cb] bg-clip-text text-transparent">
+                  
                   {slides[active].title}
                 </h3>
               )}
               {slides[active]?.paragraph && (
-                <p className="mt-4 text-base md:text-lg text-gray-600 dark:text-neutral-300 whitespace-pre-line">
+                <p className="mt-4 text-base md:text-lg text-white whitespace-pre-line">
                   {slides[active].paragraph}
                 </p>
               )}

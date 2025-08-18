@@ -20,7 +20,7 @@ import canvaLogo from './assets/tech/canva.png';
 import figmaLogo from './assets/tech/figma.png';
 import htmlLogo from './assets/tech/html.png'
 import pythonLogo from './assets/tech/python.png';
-import gitLogo from './assets/tech/gitHub.png';
+import gitLogo from './assets/tech/github.png';
 
 // Project Section Logo's
 import myucdapp from './assets/work_logo/myucdapp.jpg';

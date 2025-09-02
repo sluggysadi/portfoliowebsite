@@ -35,7 +35,7 @@ import mldimension from './assets/work_logo/ml-dimension.png';
 import pocketballot from './assets/work_logo/pocketballot.png';
 import DLforLowBandwidth from '/public/pdfs/paper2.pdf';
 import comiccrafter from './assets/work_logo/comiccrafter.png';
-
+import nba from './assets/work_logo/NBA.png';
 export const SkillsInfo = [
   {
     title: 'App/Web Development',
@@ -161,5 +161,14 @@ export const SkillsInfo = [
       image: comiccrafter,
       tags: ["React", "TypeScript", "DALL·E", "GPT-3", "App Development", "Supabase"],
       file: "https://github.com/sluggysadi/comiccrafter",
+    },
+    {
+      id: 9,
+      title: "NBA Injury Analysis",
+      description:
+        "Led exploratory data analysis with team of 5 peers on 70+ years of NBA injury data using R (tidyverse, ggplot2), uncovering key trends in injury frequency, seasonal patterns, and player/team risk factors to health insights",
+      image: nba,
+      tags: ["R", "Data Visualization"],
+      file: "https://github.com/sluggysadi/STA-141A-NBA-INJURIES.git",
     }
   ];

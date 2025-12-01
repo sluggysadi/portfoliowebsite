@@ -2,8 +2,7 @@ import React from "react";
 import ShinyText from "./shinytext";
 import profileImage from "../../assets/id/idcard.png";
 import ProfileCard from "./ProfileCard";
-import Resume from '/public/pdfs/resume_website.pdf';
-
+import Resume from '../../pdfs/WebsiteResume.pdf';
 
 function BackgroundPattern() {
   // 80 instead of 120 so fewer, larger labels fill the screen
@@ -49,10 +48,10 @@ export default function HeroOffsetClean() {
             />
 
             <p className="bg-gradient-to-r from-[#ff5e62] via-[#ff9966] to-[#6a11cb] bg-clip-text text-transparent">
-          A portfolio of not just what I do, but who I’m becoming •ᴗ•
+          A portfolio of what I love to do •ᴗ•
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-wrap gap-4">
           <a
             href={Resume}
             target="_blank"

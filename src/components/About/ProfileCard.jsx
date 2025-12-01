@@ -37,7 +37,7 @@ const ProfileCardComponent = ({
 
   /** Labels */
   universityLabel = "University of California, Davis",
-  degreeLabel = "B.S. Data Science",
+  degreeLabel = "B.S Data Science & B.A Design",
 
   /** Assets */
   schoolLogoUrl = ucdLogo,

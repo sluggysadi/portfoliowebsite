@@ -13,7 +13,7 @@ const Experience = () => {
     {
       src: img0,
       alt: "About Me",
-      title: "What's a portfolio without an introduction?",
+      title: "What's a portfolio without a little biography?",
       paragraph:
       "Scroll to learn about my college & career experience + my interests!",    
     },
@@ -33,7 +33,7 @@ const Experience = () => {
     },
     {
       src: img3,
-      alt: "Internship",
+      alt: "Early Career",
       title: "My Career Journey",
       paragraph:
         "I started out my very first internship for a peer-to-peer platform for buying and selling restaurant reservations, primarily at exclusive establishments! I was a data analyst working on explaining data trends to company leadership!",
@@ -47,10 +47,10 @@ const Experience = () => {
     },
     {
       src: img5,
-      alt: "Apple Role",
+      alt: "Apple Role & Passion Projects",
       title: "What I am doing currently",
       paragraph:
-        "I am currently working at Apple as a Support Advisor where I help users with their hardware and software issues while I work on my own passion projects on the side. I am currently developing the first intelligent photo organizer that captures the context of your photos and makes a scrapbook of your life!",
+        "I worked at Apple as a Support Advisor where I helped users with their hardware and software issues while I worked on my own passion projects on the side. I am currently developing the first intelligent photo organizer that captures the context of your photos and makes a scrapbook of your life! I have been really delving into UI/UX my fall quarter hoping to design to better serve my users! Ive been doing hackathons and designathons to build my skills and portfolio!",
     },
     {
       src: img6,
